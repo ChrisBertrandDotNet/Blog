@@ -2,4 +2,4 @@
 
 # General
 
-- [How to condense a font](General/How%20to%20condense%20a%20font.md) (2019-01-28)
+- [How to condense a font](General/How%20to%20condense%20a%20font%20\(2019-01-28\).md) (2019-01-28)
