@@ -6,7 +6,7 @@ If you want to display more source code text in a limited window, you can:
 
 Let's compare three fonts displaying the same source code text:
 
-<img src="How to condense a font - fonts anim.gif" style="width:40em;max-width:100%" alt="" >
+<img src="How to condense a font - fonts anim.gif" style="width:40rem" alt="" >
 
 ## FontForge (GPL)
 
