@@ -298,6 +298,8 @@ I strongly advise you to check your website using a high-contrast theme and a br
     font-family:  "Open Sans","Helvetica Neue", Verdana, Helvetica,Arial,sans-serif;
 ```    
 
+---
+
 \[ As usual, if you think my English writing is just horrible, you are free to correct my text and send me your fixed HTML document \]
 
 Special: please note this present page may not respect all my principles since the style is limited by the server. I chose the most respectful style theme available, but it has its limitations.
