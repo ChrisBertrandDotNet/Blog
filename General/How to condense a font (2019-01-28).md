@@ -1,4 +1,3 @@
-<div style="font-size:1rem;font-family:Verdana, sans-serif">
 # How to condense a font
 
 If you want to display more source code text in a limited window, you can:
@@ -70,5 +69,3 @@ They should not have survived to typewriters.
 
 ---
 N.B. The color theme visible on the screen shots is available on [Notepad++](https://github.com/ChrisBertrandDotNet/Programming-in-blue/tree/master/Notepad%2B%2B) and on [Visual Studio](https://github.com/ChrisBertrandDotNet/Programming-in-blue/tree/master/Visual%20Studio).
-
-</div>
