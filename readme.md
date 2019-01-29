@@ -3,7 +3,7 @@
 ### C#
 
 - [Certified values](C%23/Certified%20values%20\(2019-01-16\).md) (2019-01-16)  
-Non-null references, non-empty strings, valid enumeration values and bounded values
+Non-null references, non-empty strings, valid enumeration values and bounded values.
 
 - [Error codes, a programming philosophy](C%23/Error%20codes,%20a%20programming%20philosophy%20\(2019-01-16\).md) (2019-01-16)
 
@@ -14,3 +14,5 @@ Non-null references, non-empty strings, valid enumeration values and bounded val
 ### General
 
 - [How to condense a font](General/How%20to%20condense%20a%20font%20\(2019-01-28\).md) (2019-01-28)
+
+- [Elegant programming](General/Elegant%20programming%20\(2018-11-08\).md) (2018-11-08)
