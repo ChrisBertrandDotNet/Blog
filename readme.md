@@ -2,6 +2,9 @@
 
 ### C#
 
+- [Certified values](C%23/Certified%20values%20\(2019-01-16\).md) (2019-01-16)  
+Non-null references, non-empty strings, valid enumeration values and bounded values
+
 - [Error codes, a programming philosophy](C%23/Error%20codes,%20a%20programming%20philosophy%20\(2019-01-16\).md) (2019-01-16)
 
 ### Distribution
