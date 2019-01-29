@@ -1,4 +1,6 @@
-﻿Elegance is not limited to people, cloths or objects. It can be applied to any creative process.  
+﻿# Elegant programming
+
+Elegance is not limited to people, cloths or objects. It can be applied to any creative process.  
 In programming, elegance is a way to design software with both simplicity, efficiency, expressivity and power.
 
 ## What is the contrary of elegant programming ? Ugly programming !

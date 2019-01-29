@@ -1,4 +1,6 @@
-﻿The discussions about [C# 8 and the Nullable reference types](https://github.com/dotnet/csharplang/blob/master/proposals/nullable-reference-types.md) reminded a library I made a few years ago and I still use in my code.  
+﻿# Certified values
+
+The discussions about [C# 8 and the Nullable reference types](https://github.com/dotnet/csharplang/blob/master/proposals/nullable-reference-types.md) reminded a library I made a few years ago and I still use in my code.  
 The main structure was called `NonNull<T>`. As you can imagine it was an implementation of the concept of non-null references, which is not new.
 
 C# 8 now has its own non-null reference system, making my `NonNull` class useless on this version.  
@@ -106,7 +108,7 @@ DefinedEnum<System.PlatformID> MyOwnSystem = (System.PlatformID) 1000; // Wrong 
 
 `System.FlagsAttribute` indicates that an enumeration can be treated as a bit field; that is, a set of flags.
 
-A function let you know if a value is unique or is the addition of various values: `IsDeclaredAsAUniqueValue()`.
+The following function lets you know if a value is unique or is the addition of various values: `IsDeclaredAsAUniqueValue()`.
 
 ## Always initialize your structures [very important !]
 

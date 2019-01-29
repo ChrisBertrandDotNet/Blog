@@ -1,4 +1,5 @@
-﻿
+﻿# Error codes, a programming philosophy
+
 The proposed philosophy is to return codes on errors, not Exceptions.
 
 ## Why ?
