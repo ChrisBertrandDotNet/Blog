@@ -23,10 +23,10 @@ Fortunately, we have a good indicator: the user can choose his favorite font siz
 We can use this setting indirectly thanks to the [`rem`](https://www.w3.org/Style/Examples/007/units.en.html#future) unit (available since 2013 and widely supported by the browsers):
 ```CSS
 html, body {
-  font-size: 1**rem**; /* Respects the user's setting */
+  font-size: 1rem; /* Respects the user's setting */
 }
 h1 {
-   font-size: 1.4**rem**; /* Relative to the root font size */
+   font-size: 1.4rem; /* Relative to the root font size */
 }
 ```
 Note 1: We do not use the old unit `em` since it is relative to its upper elements/tags. In other words it’s relative, not static.
@@ -37,7 +37,7 @@ Note 2: The `rem` unit is in fact relative to the root element of the document. 
 
 The following [webpage](https://michaelscodingspot.com/2017/10/08/visual-studio-2017-extension-development-tutorial-part-2-add-menu-item/) does not respect the user’s font choice he made in his web browser settings. As a consequence, font sizes are inconsistent. The font size of the remark and the right menu should be both 10 pixels high, just as the normal text. In fact they should be both defined as `1rem`.
 
-![](incoherent-font-size.png)
+> ![](incoherent-font-size.png)
 
 ## Use the `rem` length unit everywhere
 
@@ -53,7 +53,7 @@ That is why the line thickness should depend on the user’s visual acuity.
 
 The following [webpage](https://github.com/madskristensen/EditorConfigLanguage) capture shows images that contain text (as pixels). This graphic text is greater than the normal text of the page.
 
-![](too-large-images.png)
+> ![](too-large-images.png)
 
 At first, pixels seem to be the logical size unit for pictures. But consider a picture that contains text, for example a screen capture. This text’s size has to be consistent with the actual text of the web page.
 
@@ -107,9 +107,9 @@ For more information about units, please read [this page](https://www.w3schools.
 A classical situation is when a website that has been designed for the desktop computers is displayed on a small screen, many elements overflow: the texts try to escape their column, the pictures are too large and too big, etc.
 
 To constrain the texts to their container, you may word-wrap them all.  
-\[that is the [syllabification](https://en.wikipedia.org/wiki/Syllabification)/[hyphenation](https://en.wikipedia.org/wiki/Hyphen) \]  
+\[ that is the [syllabification](https://en.wikipedia.org/wiki/Syllabification)/[hyphenation](https://en.wikipedia.org/wiki/Hyphen) \]  
 A rule at the root is the most efficient:
-```HTML
+```CSS
 body {
   word-wrap:break-word;
 }
@@ -117,8 +117,8 @@ body {
 Frankly, I don’t understand why it is not set by default in the HTML specification itself ! In my opinion, a text should never get out of its container, I see no good excuse to let it display on other elements (at least by default).
 
 The source code `pre` paragraphs need something more:
-```HTML
-<pre> {
+```CSS
+pre {
   white-space:pre-wrap;
 }
 ```
@@ -196,7 +196,7 @@ Of course you need a private test server and a set of hardware (phones, tablets,
 The user can set a high-contrast theme at the operating system level. This kind of theme has been designed for visually impaired people. Such themes can display black on white, white on black, or any colors. The web browser, as should any application, adapts its colors according to the theme and usually overrides the website colors.  
 That is something you can not control. Once again your website must adapt itself to the environment.
 
-Apart from the OS themes, many web browsers let the user impose his own colors. In that case too, your website will display colors it was not design for.
+Apart from the OS themes, many web browsers let the user impose his own colors. In that case too, your website will display colors it was not designed for.
 
 Considering the multiple possibilities that are out of your control, you may follow one rule at least:  
 Always set _both_ the background and the foreground colors, never one of them only. They should be synchronized/consistent at any moment, because you can’t always assume inherited colors (from parent elements).
@@ -219,21 +219,21 @@ I strongly advise you to check your website using a high-contrast theme and a br
     For printing all-users documents only: `cm, mm, in, pt, pc`.
     ```CSS
     html, body {
-      font-size: 1**rem**; /* Respects the user's setting */
-      letter-spacing: 0.04**rem**; /* relative to the font size */
-      line-height: 1.3**rem**; /* relative to the font size */ 
+      font-size: 1rem; /* Respects the user's setting */
+      letter-spacing: 0.04rem; /* relative to the font size */
+      line-height: 1.3rem; /* relative to the font size */ 
     }
     h1 {
-       font-size: 1.4**rem**; /* Relative to the root font size */
+       font-size: 1.4rem; /* Relative to the root font size */
     }
     pre { /* source codes */
-      border: 0.12**rem** solid #a08000;
+      border: 0.12rem solid #a08000;
     }
     #logo { /* pictures */
-      height: 4**rem**; /* synchronizes the size with the text */
+      height: 4rem; /* synchronizes the size with the text */
     }
     .slide-left{ /* use rem in the calculations too: */
-      width: calc(((100**%** - 60**rem**) / 2) - 2**rem**);
+      width: calc(((100**%** - 60rem) / 2) - 2rem);
     }
     ```
 2.  **Always wrap words:**
