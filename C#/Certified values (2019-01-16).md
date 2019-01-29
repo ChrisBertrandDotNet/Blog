@@ -1,10 +1,10 @@
 ﻿The discussions about [C# 8 and the Nullable reference types](https://github.com/dotnet/csharplang/blob/master/proposals/nullable-reference-types.md) reminded a library I made a few years ago and I still use in my code.  
-The main structure was called `NonNull<T>.` As you can imagine it was an implementation of the concept of non-null references, which is not new.
+The main structure was called `NonNull<T>`. As you can imagine it was an implementation of the concept of non-null references, which is not new.
 
 C# 8 now has its own non-null reference system, making my `NonNull` class useless on this version.  
 Nevertheless it can be useful on projects that compile an earlier version of C#.
 
-Anyway, this library contains related types that may be useful, _even on C# 8_, such as
+Anyway, this library contains related types that may be useful, _even on C# 8_, such as:
 
 -   `DefinedString`
 -   `DefinedEnum`

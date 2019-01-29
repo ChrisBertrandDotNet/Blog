@@ -1,4 +1,4 @@
-﻿This a partial mirror of my [main blog](https://chrisbertrandprogramer.wordpress.com/). Here, the directory structure is organized by topic, and articles' format is Markdown.
+﻿This is a partial mirror of my [main blog](https://chrisbertrandprogramer.wordpress.com/). Here, the directory structure is organized by topic, and articles' format is Markdown.
 
 ### C#
 
