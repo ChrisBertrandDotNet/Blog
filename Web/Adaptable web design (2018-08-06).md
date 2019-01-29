@@ -1,6 +1,6 @@
 ﻿# Let’s adapt our website to the visitor (and not the contrary)
 
-If you don’t have time: go to the [Quick reminders](#Quick reminders)
+If you don’t have time: go to the [Quick reminders](#Quick-reminders)
 
 Here I call **Adaptable Web Design** my interpretation of the concept of [Responsive web design](https://en.wikipedia.org/wiki/Responsive_web_design), except I choose a clearer title (some say I’m mad about [semantics](https://en.wikipedia.org/wiki/Semantics)).
 
@@ -20,15 +20,15 @@ We can not directly. Because for some obscure reasons (which could include lazin
 
 Fortunately, we have a good indicator: the user can choose his favorite font size in his Web browser’s settings.
 
-We can use this setting indirectly thanks to the `[rem](https://www.w3.org/Style/Examples/007/units.en.html#future)` unit (available since 2013 and widely supported by the browsers):
-
+We can use this setting indirectly thanks to the [`rem`](https://www.w3.org/Style/Examples/007/units.en.html#future) unit (available since 2013 and widely supported by the browsers):
+```CSS
 html, body {
-  font-size: 1**rem**; /\* Respects the user's setting \*/
+  font-size: 1**rem**; /* Respects the user's setting */
 }
 h1 {
-   font-size: 1.4**rem**; /\* Relative to the root font size \*/
+   font-size: 1.4**rem**; /* Relative to the root font size */
 }
-
+```
 Note 1: We do not use the old unit `em` since it is relative to its upper elements/tags. In other words it’s relative, not static.
 
 Note 2: The `rem` unit is in fact relative to the root element of the document. That is why in my example I defined a default size in the `html` element.
@@ -37,7 +37,7 @@ Note 2: The `rem` unit is in fact relative to the root element of the document. 
 
 The following [webpage](https://michaelscodingspot.com/2017/10/08/visual-studio-2017-extension-development-tutorial-part-2-add-menu-item/) does not respect the user’s font choice he made in his web browser settings. As a consequence, font sizes are inconsistent. The font size of the remark and the right menu should be both 10 pixels high, just as the normal text. In fact they should be both defined as `1rem`.
 
-![](https://chrisbertrandprogramer.files.wordpress.com/2018/09/incoherent-font-size.png?w=488)
+![](incoherent-font-size.png)
 
 ## Use the `rem` length unit everywhere
 
@@ -53,7 +53,7 @@ That is why the line thickness should depend on the user’s visual acuity.
 
 The following [webpage](https://github.com/madskristensen/EditorConfigLanguage) capture shows images that contain text (as pixels). This graphic text is greater than the normal text of the page.
 
-![](https://chrisbertrandprogramer.files.wordpress.com/2018/09/too-large-images.png?w=488)
+![](too-large-images.png)
 
 At first, pixels seem to be the logical size unit for pictures. But consider a picture that contains text, for example a screen capture. This text’s size has to be consistent with the actual text of the web page.
 
@@ -82,101 +82,23 @@ Sometimes, you need to adapt the size of an element to the size of an upper elem
 
 In short, here is my advise.
 
-Unit
-
-Screen
-
-Print
-
-%
-
-yes
-
-yes
-
-ch
-
-no
-
-no
-
-cm
-
-no
-
-when for all users
-
-em
-
-only when relative
-
-only when relative
-
-ex
-
-improbable
-
-improbable
-
-in
-
-no
-
-when for all users
-
-mm
-
-no
-
-when for all users
-
-pc
-
-no
-
-when for all users
-
-pt
-
-no
-
-when for all users
-
-px
-
-no
-
-no
-
-rem
-
-yes
-
-when for this user only
-
-vh
-
-yes
-
-yes
-
-vmax
-
-yes
-
-yes
-
-vmin
-
-yes
-
-yes
-
-vw
-
-yes
-
-yes
+| Unit | Screen | Print |
+| :--- | :---- | :--- |
+| % | yes | yes |
+| ch | no | no |
+| cm | no | when for all users |
+| em | only when relative | only when relative |
+| ex | improbable | improbable |
+| in | no | when for all users |
+| mm | no | when for all users |
+| pc | no | when for all users |
+| pt | no | when for all users |
+| px | no | no |
+| rem | yes | when for this user only |
+| vh | yes | yes |
+| vmax | yes | yes |
+| vmin | yes | yes |
+| vw | yes | yes |
 
 For more information about units, please read [this page](https://www.w3schools.com/CSSref/css_units.asp).
 
@@ -187,33 +109,33 @@ A classical situation is when a website that has been designed for the desktop c
 To constrain the texts to their container, you may word-wrap them all.  
 \[that is the [syllabification](https://en.wikipedia.org/wiki/Syllabification)/[hyphenation](https://en.wikipedia.org/wiki/Hyphen) \]  
 A rule at the root is the most efficient:
-
+```HTML
 body {
   word-wrap:break-word;
 }
-
+```
 Frankly, I don’t understand why it is not set by default in the HTML specification itself ! In my opinion, a text should never get out of its container, I see no good excuse to let it display on other elements (at least by default).
 
 The source code `pre` paragraphs need something more:
-
-**pre** {
+```HTML
+<pre> {
   white-space:pre-wrap;
 }
-
+```
 Otherwise, the long words may disappear beyond a border and stay a mystery to your readers.
 
 The pictures tend to overflow when reducing the window and when they are displayed on a small screen.  
 I suggest to set a general rule to start with:
-
+```CSS
 img {
   max-width:100%;
 }
-
+```
 As this has the side effect of distorting the pictures on window/parent-element resizing, you should let the browser take care of the pictures’ proportions.  
 The easiest way is to give only one length to the pictures: whether the width or the height, but never both:
-
-<img src\="a.png" style\="**width**: 15rem;"\>
-
+```HTML
+<img src="a.png" style="width: 15rem;">
+```
 I strongly advise you to use the same axis for all pictures and CSS rules.  
 For example always the width (via `width, min-width` and `max-width`), and never set the height (via `height, min-height` and `max-height`).
 
@@ -226,35 +148,35 @@ Others persist to display adverts or menus on one or even two sides of the main 
 
 You should reduce the size of the details, or even hide them totally.  
 The special CSS rule `@media` serves this purpose:
-
+```CSS
 @media screen and (max-width: 40rem)
 {
-  .my-logo { /\* picture \*/
+  .my-logo { /* picture */
     width:2rem;
     margin:0.4rem 0.5rem 0.25rem 0.5rem;
   }
 }
-
+```
 ### Show more details on large screens.
 
 On the contrary, on big screens some websites display desperately empty areas.  
 You may enjoy this free space displaying additional/optional elements, columns, menus, pictures.
-
+```CSS
 @media screen and (min-width: 90rem)
 {
   .slide-left {
    ....
   }
 }
-
+```
 ### Inform the browsers
 
 It can be useful to inform the browsers we take small screens into account.  
 This way, they won’t try to interpret the website as a desktop one only. That makes the browsers display the website the way we made it, without distortions.  
 Add to the HTML:
-
-<meta content\="width=device-width" name\="viewport" />
-
+```HTML
+<meta content="width=device-width" name="viewport" >
+```
 ### Check narrow windows regularly
 
 You can resize your browser’s window to a minimum (let’s say 15 characters wide) and check your website as this.  
@@ -278,103 +200,104 @@ Apart from the OS themes, many web browsers let the user impose his own colors. 
 
 Considering the multiple possibilities that are out of your control, you may follow one rule at least:  
 Always set _both_ the background and the foreground colors, never one of them only. They should be synchronized/consistent at any moment, because you can’t always assume inherited colors (from parent elements).
-
+```CSS
 pre {
   background-color: #e0e090;
    color:black;
 }
-
+```
 I strongly advise you to check your website using a high-contrast theme and a browser custom colors profile from time to time in order to ensure it remains readable in all conditions.
 
+<a name="Quick-reminders"></a>
 ## Quick reminders
 
-1.  **Use the** `**[rem](https://www.w3.org/Style/Examples/007/units.en.html#future)**` **length unit for almost everything:**  
+1.  **Use the** **[rem](https://www.w3.org/Style/Examples/007/units.en.html#future) length unit for almost everything:**  
     texts, images, borders, margins..  
     Never, never use pixels (`px`), `ch, ex`.  
     Use `em` for relative sizes.  
     Other possible units: percentages (`%`), `vh, vw, vmin, vmax`.  
     For printing all-users documents only: `cm, mm, in, pt, pc`.
-    
+    ```CSS
     html, body {
-      font-size: 1**rem**; /\* Respects the user's setting \*/
-      letter-spacing: 0.04**rem**; /\* relative to the font size \*/
-      line-height: 1.3**rem**; /\* relative to the font size \*/ 
+      font-size: 1**rem**; /* Respects the user's setting */
+      letter-spacing: 0.04**rem**; /* relative to the font size */
+      line-height: 1.3**rem**; /* relative to the font size */ 
     }
     h1 {
-       font-size: 1.4**rem**; /\* Relative to the root font size \*/
+       font-size: 1.4**rem**; /* Relative to the root font size */
     }
-    pre { /\* source codes \*/
+    pre { /* source codes */
       border: 0.12**rem** solid #a08000;
     }
-    #logo { /\* pictures \*/
-      height: 4**rem**; /\* synchronizes the size with the text \*/
+    #logo { /* pictures */
+      height: 4**rem**; /* synchronizes the size with the text */
     }
-    .slide-left{ /\* use rem in the calculations too: \*/
+    .slide-left{ /* use rem in the calculations too: */
       width: calc(((100**%** - 60**rem**) / 2) - 2**rem**);
     }
-    
+    ```
 2.  **Always wrap words:**
-    
+```CSS    
     body {
       word-wrap:break-word;
     }
-    
+```
 3.  **Cut long words too in source codes:**
-    
-    **pre** {
+```CSS    
+    pre {
       white-space:pre-wrap;
     }
-    
+```    
 4.  **Limit the pictures’ size on resizing the window:**
-    
+```CSS    
     img {
       max-width:100%;
     }
-    
+```    
 5.  **_Never_ set both the width and the height of a picture:**  
     Let the browser manage the picture proportions on resizing.
-    
-    <img src\="a.png" style\="**width**: 15rem;"\>
-    
+```HTML    
+    <img src="a.png" style="**width**: 15rem;">
+```    
 6.  **Inform the browsers we take small screens into account:**
-    
-    <meta content\="width=device-width" name\="viewport" />
-    
+```HTML    
+    <meta content="width=device-width" name="viewport" />
+```    
 7.  **Reduce some elements on small screens:**  
     You can even hide them.
-    
+```CSS    
     @media screen and (max-width: 40rem)
     {
-      .my-logo { /\* picture \*/
+      .my-logo { /* picture */
         width:2rem;
         margin:0.4rem 0.5rem 0.25rem 0.5rem;
       }
     }
-    
+```    
 8.  **Allow more space to the elements on large screens:**  
     Or even let entire columns appear only on large windows.
-    
+```CSS    
     @media screen and (min-width: 90rem)
     {
       .slide-left {
        ....
       }
     }
-    
+```    
 9.  **Always set both front color _and_ background color:**  
     If you set one of them only, your text may be unreadable on some configurations.
-    
+```CSS    
     pre {
       background-color: #e0e090;
       color:black;
     }
-    
+```    
 10.  **Select default fonts:**  
     With the variety of hardware, operating systems and languages, you can’t count on your favorite font to be present.
-    
+```CSS    
     font-family:  "Open Sans","Helvetica Neue", Verdana, Helvetica,Arial,sans-serif;
-    
+```    
 
 \[ As usual, if you think my English writing is just horrible, you are free to correct my text and send me your fixed HTML document \]
 
-Special: please note this present page may not respect all my principles since the style is limited by WordPress. I chose the most respectful style theme available, but it has its limitations. For example, it can’t fill wide screens with columns.
+Special: please note this present page may not respect all my principles since the style is limited by the server. I chose the most respectful style theme available, but it has its limitations.
