@@ -1,8 +1,8 @@
-﻿This is a partial mirror of my [main
+This is a partial mirror of my [main
 blog](https://chrisbertrandprogramer.wordpress.com/). Here, the directory
 structure is organized by topic, and articles' format is Markdown.
 
-### C
+### C\#
 
 -   [Certified values](C%23/Certified%20values%20(2019-01-16).md) (2019-01-16)  
     Non-null references, non-empty strings, valid enumeration values and bounded
@@ -33,7 +33,9 @@ structure is organized by topic, and articles' format is Markdown.
 -   [Adaptable web design](Web/Adaptable%20web%20design%20(2018-08-06).md)
     (2018-08-06)
 
--   [Make all websites look alike on FireFox](Web/Make%20all%20websites%20look%20alike%20on%20FireFox%20\(2019-02-11\).md) (2019-02-11)
+-   [Make all websites look alike on
+    FireFox](Web/Make%20all%20websites%20look%20alike%20on%20FireFox%20(2019-02-11).md)
+    (2019-02-11)
 
  
 
