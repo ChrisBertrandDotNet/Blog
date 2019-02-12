@@ -190,9 +190,18 @@ The proposed CSS file has some features:
     I noted that causes trouble in rare occasions. When possible, I added
     specific styles to fix the problem.
 
+-   A problem can occur in some websites where “icons” are displayed as font
+    characters.  
+    Depending on the character code, it may not be displayed correctly (you will
+    see the code in place of the character/icon). I noted other websites use
+    codes that work fine, so it’s technically possible.  
+    The problem comes from the fact we force our fonts. So these fonts display
+    all codes they manage. Custom fonts are displayed only for other codes.
+
  
 
-Do not hesitate to play with the CSS file and share your experience.
+Do not hesitate to play with the CSS file and report problem (or better, propose
+solutions) [here](https://github.com/ChrisBertrandDotNet/Blog/issues).
 
 Anyway, if you are not happy with the result, just rename or delete the file,
 then restart FireFox.
