@@ -80,8 +80,7 @@ In this screen capture, I use two different fonts only:
 
 [ By the way, these fonts are condensed versions I created using the technique
 described in my previous article [How to condense a
-font](https://github.com/ChrisBertrandDotNet/Blog/blob/master/General/How%20to%20condense%20a%20font%20(2019-01-28).md).
-]
+font](https://github.com/ChrisBertrandDotNet/Blog/blob/master/General/How%20to%20condense%20a%20font%20(2019-01-28).md).]
 
  
 
@@ -101,7 +100,7 @@ font](https://github.com/ChrisBertrandDotNet/Blog/blob/master/General/How%20to%2
 3.  In the file manager, copy the directory address of your profile.
 
 4.  In FireFox, download my configuration file:
-    [userContent.css](userContent.css).  
+    [userContent.css](https://raw.githubusercontent.com/ChrisBertrandDotNet/Blog/master/Web/userContent.css).  
     Save it to your profile directory.
 
 5.  Close FireFox (all its windows) and restart it.
