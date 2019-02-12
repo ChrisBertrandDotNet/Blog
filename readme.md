@@ -33,8 +33,7 @@ structure is organized by topic, and articles' format is Markdown.
 -   [Adaptable web design](Web/Adaptable%20web%20design%20(2018-08-06).md)
     (2018-08-06)
 
--   [Make all websites look alike on FireFox](Web/Make%20all%20websites%20look%20alike
-%20%20%20%20on%20FireFox%20\(2019-02-11\).md) (2019-02-11)
+-   [Make all websites look alike on FireFox](Web/Make%20all%20websites%20look%20alike%20on%20FireFox%20\(2019-02-11\).md) (2019-02-11)
 
  
 
