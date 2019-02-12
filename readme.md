@@ -15,7 +15,9 @@ Non-null references, non-empty strings, valid enumeration values and bounded val
 
 - [How to condense a font](General/How%20to%20condense%20a%20font%20\(2019-01-28\).md) (2019-01-28)
 
-- [Elegant programming](General/Elegant%20programming%20\(2018-11-08\).md) (2018-11-08)
+### Programming
+
+- [Elegant programming](Programming/Elegant%20programming%20\(2018-11-08\).md) (2018-11-08)
 
 ### Web
 

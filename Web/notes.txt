@@ -1,0 +1,3 @@
+La page https://joshvarty.com/2015/02/05/learn-roslyn-now-part-8-data-flow-analysis/
+contient aussi des caractères spéciaux, et mon CSS ne les bloque pas, contrairement au site de Boulanger.
+Est-ce dû au code (F304 au lieu de E914) qui serait dans une meilleure plage (non occupée par Verdana) ?

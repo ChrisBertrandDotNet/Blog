@@ -1,0 +1,75 @@
+/* Christophe Bertrand
+https://chrisbertrandprogramer.wordpress.com/2018/08/06/adaptable-web-design/
+https://github.com/ChrisBertrandDotNet/Blog/blob/master/Web/Adaptable%20web%20design%20(2018-08-06).md
+
+In FireFox's settings:
+- Section "General".
+	- Sub-section "Fonts and Colors".
+		- Button "Advanced...".
+			- "Latin"
+				- "Proportionnal" = "Sans serif" Size 13.
+				- "Serif" = "Verdana"  -> your favourite font for source codes.
+				- "Sans-serif" = "Verdana" -> your favourite font for normal text.
+				- "Monospace" = "Verdana" Size 13 -> your favourite font for source codes.
+				- "Minimum font size" = 13.
+			- "Other writing systems"
+				- Same settings as in "Latin".
+			- Uncheck "Allow pages to choose their own fonts, instead of your selections above".
+			- Button "OK" to save these settings.
+	
+- In "sans-serif", select your favourite font for normal text.
+- In "serif", select your favourite font for source code ("pre" and "code" tags).
+Please note your favourite font can be serif or not, it does not matter.
+
+" !important" is added to rules that may override website's rules.
+Read https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity
+
+Notes:
+- Icons drawn as font characters are not displayed as planned since all custom fonts are rejected.
+	I suggest web masters to store their icons as SVG images, possibly stored as Base 64 in the CSS or in the HTML file.
+- Some websites use specific technics or does not use standards tags (GitHub for example). I added fixes when possible.
+*/
+
+/* failed intent to solve problem with font icons:
+@font-face {
+  font-family: sans-serif !important;
+  unicode-range: U+000-DFFF, U+F900-FF?? !important;
+} */
+
+ /* All elements by default */
+*
+{
+      word-wrap:break-word; /* helps auto line feeds */
+	  font-family: sans-serif !important;  /* User must select his favourite "sans-serif" font for code in browser's settings (even if it not a true sans-serif font) */
+	  font-size:1rem !important; /* Respects user's settings  */
+	line-height: 1.2rem !important; /* safeguard  */
+}
+h1 {
+	font-size:1.3rem !important; /* safeguard  */
+}
+h2 {
+	font-size:1.2rem !important; /* safeguard  */
+}
+h3 {
+	font-size:1.1rem !important; /* safeguard  */
+}
+h4 {
+	font-size:1.05rem !important; /* safeguard  */
+}
+h5,h6,h7,h8 {
+	font-size:1rem !important; /* safeguard  */
+}
+pre, code, pre *, code *,
+.blob-wrapper * /* Why GitHub does not use the `code` tag ? */ {
+	font-family:serif !important; /* User must select his favourite "serif" font for code in browser's settings (even if it not a true serif font) */
+	word-wrap:break-word !important; /* helps auto line feeds */
+	white-space:pre-wrap !important; /* aggressively split long words, very useful with source codes */
+	background-clip: content-box !important; /* The background does not hide other lines */
+	overflow-x: hidden !important; /* Hides the horizontal scroll bar when it's not needed. */
+}
+ img {
+      max-width:100%; /* prevents images from escaping */
+ }
+ .mainpadding .singleline > * { /* linguee.fr */
+	line-height:50px !important;
+}
