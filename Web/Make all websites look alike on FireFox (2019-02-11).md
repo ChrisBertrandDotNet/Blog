@@ -137,8 +137,9 @@ automatically and immediately.
 So you can experiment different fonts and font sizes and evaluate the result.
 You don’t need to restart FireFox.
 
-For example, set the default serif font as “*Segoe Script*” (on Windows), and
-admire source codes displayed as if they were hand-written.
+For example, set the default serif font as “*Segoe Script*” (on Windows) in the
+“*Latin*” section, and admire source codes displayed as if they were
+hand-written.
 
  
 
