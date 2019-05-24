@@ -25,7 +25,7 @@ structure is organized by topic, and articles' format is Markdown.
 
 ### Parallelism
 
-- [Position list, let's replace indexes !](Parallelism/Position%20list%20\(2019-05-24\).md)
+- [Position list, let's replace indexes !](Parallelism/Position%20list%20\(2019-05-24\).md) (2019-05-24)
 
 ### Programming
 
