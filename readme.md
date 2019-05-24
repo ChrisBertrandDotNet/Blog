@@ -23,6 +23,10 @@ structure is organized by topic, and articles' format is Markdown.
 -   [How to condense a
     font](General/How%20to%20condense%20a%20font%20(2019-01-28).md) (2019-01-28)
 
+### Parallelism
+
+- [Position list, let's replace indexes !](Parallelism/Position%20list%20\(2019-05-24\).md)
+
 ### Programming
 
 -   [Elegant programming](Programming/Elegant%20programming%20(2018-11-08).md)

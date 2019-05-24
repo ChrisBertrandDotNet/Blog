@@ -57,7 +57,9 @@ The procedure
 
             2.  "*Other writing systems*"
 
-                6.  Same settings as in "Latin".
+                6.  Same settings as in "Latin".  
+                    That is needed for websites than declare non-human
+                    languages, such as CodeProject in `<pre lang="xml"></pre>`.
 
             3.  Uncheck "*Allow pages to choose their own fonts, instead of your
                 selections above*".

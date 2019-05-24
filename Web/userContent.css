@@ -40,7 +40,7 @@ Notes:
 *
 {
       word-wrap:break-word; /* helps auto line feeds */
-	  font-family: sans-serif !important;  /* User must select his favourite "sans-serif" font for code in browser's settings (even if it not a true sans-serif font) */
+	  /* DISABLED BECAUSE OF FONT ICONS: font-family: sans-serif !important;   User must select his favourite "sans-serif" font for code in browser's settings (even if it not a true sans-serif font) */
 	  font-size:1rem !important; /* Respects user's settings  */
 	line-height: 1.2rem !important; /* safeguard  */
 }
@@ -70,6 +70,10 @@ pre, code, pre *, code *,
  img {
       max-width:100%; /* prevents images from escaping */
  }
+ img[class^="rc-image-tile-"] { /* exception for google.com/recaptcha/ */
+      max-width:none;
+ }
+
  .mainpadding .singleline > * { /* linguee.fr */
 	line-height:50px !important;
 }
